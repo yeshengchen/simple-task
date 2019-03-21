@@ -1,0 +1,15 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: task-gateway
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka
+zuul:
+  routes:
+      api-a-:
+        path: /task-core/**
+        serviceId: TASK-CORE
+
