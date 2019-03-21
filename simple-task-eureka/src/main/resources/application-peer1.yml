@@ -1,0 +1,12 @@
+# 主发现中心
+server:
+  port: 8001
+
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8002/eureka/

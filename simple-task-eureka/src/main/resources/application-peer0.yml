@@ -1,0 +1,14 @@
+# 主发现中心
+server:
+  port: 8001
+
+spring:
+  profiles: peer0
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serverUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

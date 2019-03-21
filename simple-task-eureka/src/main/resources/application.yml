@@ -1,0 +1,9 @@
+# 可通过切换 peer1,peer2 指定不同配置,启动多个 eureka 服务作为集群
+# peer0 为单机部署
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: peer0
+#    active: peer1
+#    active: peer2
